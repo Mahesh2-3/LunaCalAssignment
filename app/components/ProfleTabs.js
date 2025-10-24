@@ -59,7 +59,7 @@ export default function ProfileTabs() {
         >
           {/* Sliding Background */}
           <motion.div
-            className="absolute top-2 bottom-2 rounded-2xl bg-[#28292f] shadow-[12px_12px_32px_14px_#141516e3]"
+            className="absolute top-2 z-10 bottom-2 rounded-2xl bg-[#28292f] shadow-[12px_12px_32px_14px_#141516e3]"
             animate={{
               left: indicator.left,
               width: indicator.width,
@@ -78,18 +78,18 @@ export default function ProfileTabs() {
               onMouseEnter={() => setHoveredTab(tab)}
               onMouseLeave={() => setHoveredTab(null)}
               onClick={() => setActive(tab)}
-              className={`relative z-10 px-5 cursor-pointer text-center grow py-2.5 xl:text-lg text-base rounded-2xl font-pops font-medium transition-all ${
+              className={`relative px-5 z-10 cursor-pointer text-center grow py-2.5 xl:text-lg text-base rounded-2xl font-pops font-medium transition-all ${
                 active === tab
                   ? "text-white"
                   : "bg-transparent hover:text-white text-gray-300"
               }`}
             >
               <span
-                className={`h-full transition-all duration-300 ease-in-out absolute top-0 left-0 opacity-40 bg-linear-to-r rounded-2xl
+                className={`h-full transition-all duration-200 ease-in-out absolute top-0 left-0 z-10 opacity-40 bg-linear-to-r rounded-[23px]
                 ${HoveredTab === tab && !(active === tab) ? "w-full" : "w-0"}
                  from-[#9e9eff30] to-[#babafd30] `}
               />
-              {tab}
+              <span className="z-50">{tab}</span>
             </button>
           ))}
         </div>
