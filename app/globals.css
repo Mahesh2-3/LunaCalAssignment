@@ -9,7 +9,32 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+  --font-pops: var(--font-plus-poppins);
+  --font-jakarta: var(--font-plus-jakarta-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-lgg: 54rem;
+  --animate-gradient-left: gradient-left 0.8s linear forwards;
+  --animate-gradient-right: gradient-right 0.8s linear forwards;
+
+  @keyframes gradient-left {
+    0% {
+      background-position: "100% 0";
+    }
+
+    100% {
+      background-position: "0% 0";
+    }
+  }
+
+  @keyframes gradient-right {
+    0% {
+      background-position: "100% 0";
+    }
+
+    100% {
+      background-position: "0% 0";
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +48,73 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.glass-component {
+  backdrop-filter: blur(104.5px);
+
+  box-shadow: 0px 3.26px 3.26px 0px #FFFFFF26 inset;
+
+  box-shadow: 0px 0px 48.91px 0px #FFFFFF0D inset, 9px 10px 7.1px 0px #00000066, -0.5px -0.5px 6.9px 0px #FFFFFF40;
+  background: #FFFFFF08;
+  border-radius: 20px;
+}
+
+.little-glass {
+
+  box-shadow: 4px 5px 30px 5px #101213, -7px -4px 17px -9px #96bee7;
+  background: linear-gradient(139.14deg, #303439 12.4%, #161718 94.96%);
+
+
+  /* Add foundational styles like border-radius for a smooth look */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-styles {
+  max-width: 612px;
+  width: 100%;
+  height: 4;
+  opacity: 1;
+  border-radius: 2.46px;
+  margin-bottom: 10px;
+
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0.1) 0%, rgba(248, 248, 248, 0.1) 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(9.8px);
+
+  box-shadow: 0px 4px 4px 0px #00000054;
+
+}
+
+.main {
+  background: linear-gradient(180deg, #373E44 -100%, #191B1F 100%);
+  box-shadow: 10px 10px 40px 10px #00000080;
+  border-radius: 28px;
+}
+
+.tabs-shadow {
+  box-shadow: 5.67px 5.67px 3.78px 0px #00000066;
+}
+
+
+/* For Chrome, Safari, and Edge */
+.scrollbar-hide {
+  overflow: auto;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+/* For Internet Explorer/Edge Legacy */
+.scrollbar-hide {
+  -ms-overflow-style: none;
 }
